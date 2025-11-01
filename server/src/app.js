@@ -9,9 +9,16 @@ app.use(cors({
     credentials: true
 }));
 
-app.use(express.json());
-app.use(express.urlencoded());
+//These middlewares make sure that when a request comes with a JSON or form body, it gets parsed and becomes accessible via req.body.
+app.use(express.json());// for JSON body
+app.use(express.urlencoded({extended: true}));// for form submissions
 app.use(express.static("public"));
 app.use(cookieParser());
 
+
+//Routes import
+import userRouter from './routes/user.routes.js'
+
+//Routes declaration
+app.use('/api/v1/user', userRouter);
 export {app}
