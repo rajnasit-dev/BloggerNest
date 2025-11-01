@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
 
+
 const app = express();
 
 app.use(cors({
@@ -18,7 +19,16 @@ app.use(cookieParser());
 
 //Routes import
 import userRouter from './routes/user.routes.js'
+import postRouter from './routes/post.routes.js'
+import commentRouter from './routes/comment.routes.js'
 
 //Routes declaration
-app.use('/api/v1/user', userRouter);
+app.use('/api/v1/users', userRouter);
+app.use('/api/v1/posts', postRouter);
+app.use('/api/v1/comments', commentRouter);
+
+//Documentation purpose
+import { swaggerDocs } from "./swagger.js";
+swaggerDocs(app);
+
 export {app}

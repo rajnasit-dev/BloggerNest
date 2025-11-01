@@ -27,7 +27,6 @@ const userSchema = await new Schema(
     },
     avatar: {
       type: String,
-      default: "../../public/images/user-blue-gradient.jpg",
     },
     role: {
       type: String,

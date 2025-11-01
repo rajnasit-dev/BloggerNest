@@ -1,1 +1,1 @@
-export const DB_NAME = "BloggerNest";
+export const DB_NAME = process.env.DB_NAME;
