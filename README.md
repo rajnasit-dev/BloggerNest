@@ -95,6 +95,16 @@ This API allows users to **create, read, update, and delete blog posts and comme
 | **PUT** | `/posts/{id}` | Update an existing post | ✅ |
 | **DELETE** | `/posts/{id}` | Delete a post | ✅ |
 
+### 💬 Comment Endpoints
+
+| Method | Endpoint | Description | Auth |
+|:-------|:----------|:-------------|:------|
+| **GET** | `/comments?post_id={postId}` | Get all comments for a specific post | ❌ |
+| **GET** | `/comments/{id}` | Get a specific comment by ID | ❌ |
+| **POST** | `/comments/create/{id}` | Create a new comment for a post | ✅ |
+| **PUT** | `/comments/{id}` | Update a comment | ✅ |
+| **DELETE** | `/comments/{id}` | Delete a comment | ✅ |
+
 
 ---
 
