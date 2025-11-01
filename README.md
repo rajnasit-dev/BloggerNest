@@ -41,7 +41,7 @@ This API allows users to **create, read, update, and delete blog posts and comme
 | Field | Type | Description |
 |--------|------|-------------|
 | id | ObjectId | Unique User ID |
-| username | String | User’s name |
+| fullName | String | User’s name |
 | email | String | User’s email |
 | password | String | Hashed password |
 | avatar | String | User's Avatar |
